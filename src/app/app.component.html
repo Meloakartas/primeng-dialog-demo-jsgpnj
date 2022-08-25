@@ -4,11 +4,13 @@
   icon="pi pi-external-link"
   label="Show"
 ></p-button>
+<!-- Content Style is the magic : https://stackoverflow.com/a/55360351 -->
 <p-dialog
+  [contentStyle]="{ overflow: 'visible' }"
   header="Header"
   [(visible)]="displayModal"
   [modal]="true"
-  [style]="{ width: '50vw' }"
+  [style]="{ height: '30%' }"
   [baseZIndex]="10000"
   [draggable]="false"
   [resizable]="false"
