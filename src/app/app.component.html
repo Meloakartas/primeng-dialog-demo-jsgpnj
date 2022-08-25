@@ -1,0 +1,23 @@
+<h5>Modal</h5>
+<p-button
+  (click)="showModalDialog()"
+  icon="pi pi-external-link"
+  label="Show"
+></p-button>
+<p-dialog
+  header="Header"
+  [(visible)]="displayModal"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <p-multiSelect
+    [options]="cities"
+    [(ngModel)]="selectedCities1"
+    defaultLabel="Select a City"
+    optionLabel="name"
+  >
+  </p-multiSelect>
+</p-dialog>
